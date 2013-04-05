@@ -11,22 +11,21 @@
 </body>
 <script src="RandomColorGenerator.js"></script>
 <script>
-
-    function CurrentWindow(){};
-    CurrentWindow.prototype.getWidth = function()
+    var WindowHelper = {};
+    WindowHelper.getWidth = function()
     {
         return window.innerWidth || document.documentElement.clientWidth;
     };
 
-    CurrentWindow.prototype.getHeight = function()
+    WindowHelper.getHeight = function()
     {
         return window.innerHeight|| document.documentElement.clientHeight;
     };
 
+    var girlsDiv = document.getElementById("girlsText");
+
     var resize = function(){
-        var currentWindow = new CurrentWindow();
-        var girlsDiv = document.getElementById("girlsText");
-        girlsDiv.setAttribute("style", "font-size:" + currentWindow.getWidth()/3.5 + "px; top:" + currentWindow.getHeight()/6.5 + "px;")
+        girlsDiv.setAttribute("style", "font-size:" + WindowHelper.getWidth()/3.5 + "px; top:" + WindowHelper.getHeight()/6.5 + "px;")
     }
 
     resize();
