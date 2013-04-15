@@ -10,40 +10,4 @@
         <div id="girlsText">GIRLS</div>
     </div>
 </body>
-<<<<<<< HEAD:girls/Index.html
-=======
-<script src="RandomColorGenerator.js"></script>
-<script>
-    var WindowHelper = {};
-    WindowHelper.getWidth = function()
-    {
-        return window.innerWidth || document.documentElement.clientWidth;
-    };
-
-    WindowHelper.getHeight = function()
-    {
-        return window.innerHeight|| document.documentElement.clientHeight;
-    };
-
-    var girlsDiv = document.getElementById("girlsText");
-
-    var resize = function(){
-        girlsDiv.setAttribute("style", "font-size:" + WindowHelper.getWidth()/3.5 + "px; top:" + WindowHelper.getHeight()/6.5 + "px;")
-    }
-
-    resize();
-
-    window.onresize = function()
-    {
-        resize();
-    }
-
-    setInterval(
-            function(){
-                document.body.style.backgroundColor = generateRandomColor();
-                document.getElementById("girlsText").style.color = generateRandomColor();
-            },
-            2000);
-</script>
->>>>>>> remotes/origin/gh-pages:girls/index.html
 </html>
