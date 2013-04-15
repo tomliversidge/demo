@@ -1,46 +1,13 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>G I R L S</title>
-    <link href="girls.css" rel="stylesheet" type="text/css">
+    <script data-main="scripts/main" src="scripts/require.js"></script>
+    <link href="css/main.css" rel="stylesheet" type="text/css"/>
 </head>
-<body id="body">
-            <div id="girlsContainer">
-                <div id="girlsText">GIRLS</div>
-            </div>
+<body>
+    <div id="girlsContainer">
+        <div id="girlsText">GIRLS</div>
+    </div>
 </body>
-<script src="RandomColorGenerator.js"></script>
-<script>
-
-    function CurrentWindow(){};
-    CurrentWindow.prototype.getWidth = function()
-    {
-        return window.innerWidth || document.documentElement.clientWidth;
-    };
-
-    CurrentWindow.prototype.getHeight = function()
-    {
-        return window.innerHeight|| document.documentElement.clientHeight;
-    };
-
-    var resize = function(){
-        var currentWindow = new CurrentWindow();
-        var girlsDiv = document.getElementById("girlsText");
-        girlsDiv.setAttribute("style", "font-size:" + currentWindow.getWidth()/3.5 + "px; top:" + currentWindow.getHeight()/6.5 + "px;")
-    }
-
-    resize();
-
-    window.onresize = function()
-    {
-        resize();
-    }
-
-    setInterval(
-            function(){
-                document.body.style.backgroundColor = generateRandomColor();
-                document.getElementById("girlsText").style.color = generateRandomColor();
-            },
-            2000);
-</script>
 </html>
